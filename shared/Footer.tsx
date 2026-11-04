@@ -12,7 +12,7 @@ export default function Footer({ lang }: { lang: Language }) {
         "https://www.instagram.com/andreeva__iuliia/",
     ],
     ["Telegram", process.env.TELEGRAM_URL],
-    ["WhatsApp", process.env.WHATSAPP_URL],
+    ["WhatsApp", process.env.WHATSAPP_URL || "https://wa.me/12795297117"],
   ].filter((entry): entry is [string, string] =>
     Boolean(entry[1] && /^https:\/\//.test(entry[1])),
   );
